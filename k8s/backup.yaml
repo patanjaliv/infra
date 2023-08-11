@@ -1,0 +1,6 @@
+apiVersion: resources.cattle.io/v1
+kind: Backup
+metadata:
+  name: pre-rancher-upgrade
+spec:
+  resourceSetName: rancher-resource-set
