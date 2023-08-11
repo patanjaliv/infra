@@ -1,0 +1,11 @@
+resource "aws_instance" "argocd" {
+  ami           = "ami-0d4253c834ad3f5aa"  # Replace with the desired AMI ID
+  instance_type = "t3.medium"  # Replace with the desired instance type
+  vpc_security_group_ids = ["sg-01f50ce439e9daf6f"]
+  subnet_id     = "subnet-07f1a402fec4d3fa4"
+  key_name      = "devops"  # Replace with the name of your existing SSH key pair
+
+  tags = {
+    Name = "argocd"  # Replace with your desired instance name
+  }
+}
